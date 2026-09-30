@@ -1,11 +1,11 @@
 import BotanicalDivider from "./BotanicalDivider";
 import ImagePlaceholder from "./ImagePlaceholder";
 
-const photos = ["Photo 1", "Photo 2", "Photo 3"];
+const photos = ["Photo 1", "Photo 2", "Photo 3", "Photo 4"];
 
 export default function OurMoments() {
   return (
-    <section className="w-full rounded-3xl bg-[#fdfbf7] p-8 text-center sm:p-12 shadow-[0_20px_50px_-20px_rgba(138,154,123,0.35)]">
+    <section className="card-bg w-full rounded-3xl p-8 text-center sm:p-12 shadow-[0_30px_60px_-15px_rgba(43,43,43,0.4)]">
       <p className="text-xs uppercase tracking-[0.3em] text-[#5a5a5a]">
         Our Moments
       </p>
@@ -18,7 +18,7 @@ export default function OurMoments() {
         Captured memories
       </h2>
 
-      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
         {photos.map((photo) => (
           <ImagePlaceholder
             key={photo}

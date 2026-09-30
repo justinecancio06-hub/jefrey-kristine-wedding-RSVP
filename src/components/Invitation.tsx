@@ -2,7 +2,7 @@ import BotanicalDivider from "./BotanicalDivider";
 
 export default function Invitation() {
   return (
-    <section className="w-full rounded-3xl bg-[#fdfbf7] p-8 text-center sm:p-12 shadow-[0_20px_50px_-20px_rgba(138,154,123,0.35)]">
+    <section className="card-bg w-full rounded-3xl p-8 text-center sm:p-12 shadow-[0_30px_60px_-15px_rgba(43,43,43,0.4)]">
       <p className="text-xs uppercase tracking-[0.3em] text-[#5a5a5a]">
         A Note From Us
       </p>

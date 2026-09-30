@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Great_Vibes, Cormorant_Garamond, Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const greatVibes = Great_Vibes({
@@ -26,14 +27,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kristine & Jefrey — December 28, 2026",
+  title: "Jefrey & Kristine — December 28, 2026",
   description:
-    "You are invited to the wedding of Kristine Abero & Jefrey Lopez at St. Paul Chapel, Mataragan, Malibcong, Abra on Sunday, December 28, 2026 at 4 PM.",
+    "You are invited to the wedding of Jefrey Lopez & Kristine Abero at St. Paul Chapel, Mataragan, Malibcong, Abra on Sunday, December 28, 2026 at 4 PM.",
   openGraph: {
     type: "website",
-    title: "Kristine & Jefrey — December 28, 2026",
+    title: "Jefrey & Kristine — December 28, 2026",
     description:
-      "You are invited to the wedding of Kristine Abero & Jefrey Lopez.",
+      "You are invited to the wedding of Jefrey Lopez & Kristine Abero.",
   },
 };
 
@@ -48,6 +49,7 @@ export default function RootLayout({
       className={`${greatVibes.variable} ${cormorant.variable} ${inter.variable}`}
     >
       <body className="font-sans antialiased flex min-h-dvh flex-col">
+        <Header />
         <div className="flex-1">{children}</div>
         <Footer />
       </body>

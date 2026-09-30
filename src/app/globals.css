@@ -10,6 +10,10 @@
   --color-sage-pale: #e8ede0;
   --color-gold: #c9a961;
   --color-gold-deep: #a98a4b;
+  --color-olive: #5f6d53;
+  --color-olive-light: #8a9a7b;
+  --color-army: #4b5320;
+  --color-army-deep: #333a12;
   --color-ink: #2b2b2b;
   --color-label: #5a5a5a;
 
@@ -23,14 +27,7 @@ html {
 }
 
 body {
-  background-color: var(--color-cream);
-  background-image: radial-gradient(
-    ellipse 80% 60% at 50% 40%,
-    var(--color-cream-warm) 0%,
-    var(--color-cream) 60%,
-    #f0ece2 100%
-  );
-  background-attachment: fixed;
+  background-color: #e1c8bc;
   color: var(--color-ink);
   font-family: var(--font-sans);
   color-scheme: light;
@@ -39,6 +36,75 @@ body {
 ::selection {
   background: var(--color-sage-light);
   color: var(--color-ink);
+}
+
+.card-bg {
+  background-color: #fdfbf7;
+  background-image:
+    radial-gradient(
+      ellipse 100% 100% at 50% 40%,
+      rgba(247, 244, 237, 0.55) 0%,
+      rgba(247, 244, 237, 0.8) 100%
+    ),
+    url("/mainBG.jpg");
+  background-size: auto, cover;
+  background-position: center, center;
+}
+
+.card-bg [class*="text-[#8a9a7b]"] {
+  color: var(--color-olive);
+}
+
+.card-bg [class*="text-[#6b7a5e]"] {
+  color: var(--color-olive);
+}
+
+body [class*="text-[#8a9a7b]"],
+body [class*="text-[#6b7a5e]"],
+body [class*="text-[#2b2b2b]"],
+body [class*="text-[#5a5a5a]"] {
+  color: var(--color-olive);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6),
+    0 -1px 0 rgba(58, 68, 46, 0.6),
+    0 2px 4px rgba(43, 43, 43, 0.25);
+}
+
+/* Embossed olive green text: raised highlight above, shadow below */
+.olive-text {
+  color: var(--color-olive);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65),
+    0 -1px 0 rgba(56, 65, 43, 0.75),
+    0 -2px 2px rgba(56, 65, 43, 0.35),
+    0 2px 4px rgba(43, 43, 43, 0.35);
+}
+
+/* Heavier emboss for the large script headings */
+.olive-emboss {
+  color: var(--color-olive);
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.6),
+    0 -2px 0 rgba(56, 65, 43, 0.85),
+    0 -3px 3px rgba(56, 65, 43, 0.4),
+    0 3px 6px rgba(43, 43, 43, 0.45),
+    0 10px 18px rgba(43, 43, 43, 0.4);
+}
+
+/* Army green gradient fill (text clipped to the gradient) */
+.army-fill {
+  background-image: linear-gradient(
+    180deg,
+    rgba(138, 154, 74, 0.7) 0%,
+    rgba(75, 83, 32, 0.7) 45%,
+    rgba(51, 58, 18, 0.7) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 2px 0 rgba(255, 255, 255, 0.4))
+    drop-shadow(0 6px 12px rgba(43, 43, 43, 0.45));
 }
 
 :focus-visible {
@@ -87,5 +153,23 @@ body {
   }
   nav {
     display: none;
+  }
+  body [class*="text-[#8a9a7b]"],
+  body [class*="text-[#6b7a5e]"],
+  body [class*="text-[#2b2b2b]"],
+  body [class*="text-[#5a5a5a]"] {
+    color: #2b2b2b;
+    text-shadow: none;
+  }
+  .olive-text,
+  .olive-emboss {
+    color: #2b2b2b;
+    text-shadow: none;
+  }
+  .army-fill {
+    background-image: none;
+    -webkit-text-fill-color: #2b2b2b;
+    color: #2b2b2b;
+    filter: none;
   }
 }

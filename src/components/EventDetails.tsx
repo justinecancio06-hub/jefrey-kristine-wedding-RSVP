@@ -10,7 +10,7 @@ const events: {
 
 export default function EventDetails() {
   return (
-    <section className="w-full rounded-3xl bg-[#fdfbf7] px-6 py-12 sm:px-10 shadow-[0_20px_50px_-20px_rgba(138,154,123,0.35)]">
+    <section className="card-bg w-full rounded-3xl px-6 py-12 sm:px-10 shadow-[0_30px_60px_-15px_rgba(43,43,43,0.4)]">
       <h2 className="text-center font-script text-4xl text-[#8a9a7b] sm:text-5xl">
         Wedding Details
       </h2>
